@@ -6,10 +6,9 @@ import { TooltipProvider } from "./components/ui/tooltip";
 import NotFound from "./pages/not-found";
 import Home from "./pages/Home";
 
-const basePath =
-  (import.meta.env.BASE_URL && import.meta.env.BASE_URL !== "/"
-    ? import.meta.env.BASE_URL
-    : "/") || "/";
+const rawBase = import.meta.env.BASE_URL || "/";
+const normalizedBase = rawBase.replace(/\/+$/, "") || "/";
+const basePath = normalizedBase === "/" ? "" : normalizedBase;
 
 function AppRoutes() {
   return (
