@@ -282,33 +282,6 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-
-          {/* Centered card (screenshot-style) */}
-          {showHeroCard && (
-            <div className="absolute z-20 inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-full max-w-md bg-white text-black p-8 rounded-3xl text-center pointer-events-auto shadow-2xl relative">
-                <button
-                  aria-label="Close"
-                  className="absolute top-3 right-3 text-gray-600 hover:text-black"
-                  onClick={() => setShowHeroCard(false)}
-                >
-                  <X size={20} />
-                </button>
-                <div className="mx-auto w-20 h-20 flex items-center justify-center rounded-full bg-primary/10 mb-4">
-                  <ShieldCheck className="w-12 h-12 text-primary" />
-                </div>
-                <h2 className="text-3xl font-bold mb-2" style={{ color: "#05506bff" }}>Mail Guard</h2>
-              <p className="text-sm text-black/80 mb-6">Prototype: secure, fast, and explainable filtering for UOB mail.</p>
-              <Button 
-                size="lg" 
-                className="w-full bg-[#1062a8] hover:bg-[#0e5aa0] text-white rounded-full h-12"
-                onClick={() => window.location.assign("https://aruq69.github.io/auth/")}
-              >
-                Launch Prototype
-              </Button>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
