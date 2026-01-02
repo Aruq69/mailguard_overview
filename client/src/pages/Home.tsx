@@ -225,13 +225,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mb-6">
-                <img 
-                  src={uobLogo} 
-                  alt="UOB Logo" 
-                  className="h-20 w-auto mx-auto lg:mx-0 drop-shadow-lg" 
-                />
-              </div>
+      
               
               <div className="mb-6">
                 <p className="text-lg font-medium text-primary mb-2">University of Bahrain</p>
