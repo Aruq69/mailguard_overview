@@ -7,9 +7,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
-  base:
-    process.env.VITE_BASE ??
-    (process.env.NODE_ENV === "production" ? "/mailguard_overview/" : "/"),
+  base: process.env.VITE_BASE || (process.env.NODE_ENV === "production" ? "./" : "/"),
   plugins: [
     react(),
     runtimeErrorOverlay(),
