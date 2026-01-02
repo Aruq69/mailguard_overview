@@ -8,9 +8,11 @@ import NotFound from "./pages/not-found";
 import Home from "./pages/Home";
 
 function AppRoutes() {
-  const routerHook = import.meta.env.MODE === "production" ? useHashLocation : undefined;
+  const useHash = import.meta.env.MODE === "production";
+  const routerHook = useHash ? useHashLocation : undefined;
   const rawBase = import.meta.env.BASE_URL || "/";
-  const normalizedBase = rawBase.replace(/\/+$/, "") || "/";
+  // With hash routing, keep base empty so hash drives routing on Pages.
+  const normalizedBase = useHash ? "" : (rawBase.replace(/\/+$/, "") || "/");
   const basePath = normalizedBase === "/" ? "" : normalizedBase;
 
   return (
