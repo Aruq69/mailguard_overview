@@ -6,7 +6,11 @@ import { TooltipProvider } from "./components/ui/tooltip";
 import NotFound from "./pages/not-found";
 import Home from "./pages/Home";
 
-const rawBase = import.meta.env.BASE_URL || "/";
+const inferredBase =
+  typeof window !== "undefined" && window.location.pathname.includes("mailguard_overview")
+    ? "/mailguard_overview"
+    : "/";
+const rawBase = import.meta.env.BASE_URL || inferredBase;
 const normalizedBase = rawBase.replace(/\/+$/, "") || "/";
 const basePath = normalizedBase === "/" ? "" : normalizedBase;
 
