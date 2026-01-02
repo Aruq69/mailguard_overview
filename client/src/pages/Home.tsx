@@ -800,7 +800,7 @@ export default function Home() {
             <div className="text-center">
               <h4 className="font-bold text-black mb-4">Quick Links</h4>
               <div className="space-y-2 text-sm text-black">
-                <p><a href="#home" className="hover:text-primary transition-colors">Home</a></p>
+                <p><a href="#hero" className="hover:text-primary transition-colors">Home</a></p>
                 <p><a href="#abstract" className="hover:text-primary transition-colors">Abstract</a></p>
                 <p><a href="#objectives" className="hover:text-primary transition-colors">Objectives</a></p>
                 <p><a href="#methodology" className="hover:text-primary transition-colors">Methodology</a></p>
