@@ -27,6 +27,10 @@ import { Textarea } from "../components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../components/ui/form";
 import { Badge } from "../components/ui/badge";
 import { useCreateMessage } from "../hooks/use-messages";
+import uobLogo from "/images/uob_logo.png";
+import architectureImg from "/images/architecture.png";
+import demoEng from "/demo_eng.mp4";
+import demoAr from "/demo_arabic.mp4";
 
 export default function Home() {
   const [showHeroCard, setShowHeroCard] = useState(true);
@@ -158,13 +162,13 @@ export default function Home() {
       title: "Elevator Pitch (English)",
       language: "English",
       description: "1-3 minute overview of the problem, solution, and live scoring demo.",
-      src: "/demo_eng.mp4"
+      src: demoEng
     },
     {
       title: "Arabic Demo (Arabic)",
       language: "Arabic",
       description: "1-3 minute summary in Arabic showing the smart filtering demo.",
-      src: "/demo_arabic.mp4"
+      src: demoAr
     },
   ];
 
@@ -223,7 +227,7 @@ export default function Home() {
             >
               <div className="mb-6">
                 <img 
-                  src="/images/uob_logo.png" 
+                  src={uobLogo} 
                   alt="UOB Logo" 
                   className="h-20 w-auto mx-auto lg:mx-0 drop-shadow-lg" 
                 />
@@ -277,7 +281,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
                 <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }} />
                 <img 
-                  src="/images/uob_logo.png" 
+                  src={uobLogo} 
                   alt="University of Bahrain" 
                   className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
                 />
@@ -304,7 +308,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 className="w-full bg-[#1062a8] hover:bg-[#0e5aa0] text-white rounded-full h-12"
-                onClick={() => window.location.assign("https://aruq69.github.io/E-mail-filtering/")}
+                onClick={() => window.location.assign("https://aruq69.github.io/auth/")}
               >
                 Launch Prototype
               </Button>
@@ -445,7 +449,7 @@ export default function Home() {
                     <Badge variant="secondary" className="bg-primary/10 text-primary">Microservices</Badge>
                   </div>
                   <img 
-                    src="/images/architecture.png" 
+                    src={architectureImg} 
                     alt="System architecture diagram" 
                     className="rounded-lg border border-gray-200 shadow-sm"
                   />
@@ -793,7 +797,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div className="text-center md:text-left">
               <img 
-                src="/images/uob_logo.png" 
+                src={uobLogo} 
                 alt="UOB Logo" 
                 className="h-20 mx-auto md:mx-0 mb-4 opacity-80 grayscale hover:grayscale-0 transition-all" 
               />

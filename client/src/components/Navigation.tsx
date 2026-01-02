@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/button";
+import uobLogo from "/images/uob_logo.png";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,7 @@ export function Navigation() {
             className="cursor-pointer flex items-center gap-3"
           >
             <img 
-              src="/images/uob_logo.png" 
+              src={uobLogo}
               alt="UOB Logo" 
               className="h-10 w-auto" // Adjusted for better nav fit
             />
