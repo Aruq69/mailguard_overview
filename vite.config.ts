@@ -7,7 +7,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
-  base: process.env.VITE_BASE || (process.env.NODE_ENV === "production" ? "./" : "/"),
+  base: process.env.VITE_BASE ?? (process.env.NODE_ENV === "production" ? "./" : "/"),
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -32,7 +32,7 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist", "public"),
     emptyOutDir: true,
   },
   server: {
