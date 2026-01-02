@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
-import { api } from "@shared/routes";
-import { useToast } from "@/hooks/use-toast";
-import type { InsertMessage } from "@shared/schema";
+import { api } from "../../../shared/routes";
+import { useToast } from "./use-toast";
+import type { InsertMessage } from "../../../shared/schema";
 
 export function useCreateMessage() {
   const { toast } = useToast();

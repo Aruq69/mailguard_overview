@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force black text across the Home page when the helper class is applied */
+
+
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(0,0,0, .10);
@@ -198,11 +201,15 @@
 
 @layer base {
   * {
-    @apply border-border;
+    box-sizing: border-box;
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: hsl(var(--background) / 1);
+      color: hsl(var(--foreground) / 1);
   }
 }
 
@@ -273,5 +280,45 @@
   .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after {
     inset: -1px;
+  }
+}
+
+/* Custom utilities for project showcase */
+@layer components {
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary/80;
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-br from-secondary to-secondary/80;
+  }
+
+  /* Hero dark utilities */
+  .hero-dark {
+    background: linear-gradient(180deg,#0b0f17 0%, #05060a 100%);
+    color: white;
+  }
+
+  .hero-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-card {
+    background: rgba(11,15,23,0.72);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(6px);
   }
 }

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { cn } from "../lib/utils";
+import { Button } from "./ui/button";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,9 @@ export function Navigation() {
     { name: "Methodology", to: "methodology" },
     { name: "Technologies", to: "technologies" },
     { name: "Results", to: "results" },
-    { name: "Team", to: "team" },
+    { name: "Demo", to: "demo" },
+    { name: "Conclusion", to: "conclusion" },
+    { name: "About & Team", to: "about" },
   ];
 
   return (
@@ -46,7 +48,7 @@ export function Navigation() {
               className="h-10 w-auto" // Adjusted for better nav fit
             />
             <div className="hidden md:block">
-              <span className={cn("block text-sm font-bold leading-tight", scrolled ? "text-secondary" : "text-secondary")}>
+              <span className={cn("block text-sm font-bold leading-tight", scrolled ? "text-black" : "text-white")}>
                 Mail Guard
               </span>
               <span className={cn("block text-xs uppercase tracking-wider", scrolled ? "text-muted-foreground" : "text-secondary/70")}>
@@ -66,10 +68,10 @@ export function Navigation() {
                 offset={-100}
                 duration={500}
                 className={cn(
-                  "cursor-pointer px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                  "cursor-pointer px-3 py-2 text-sm font-medium rounded-md transition-colors text-[#f5b400]",
                   scrolled 
-                    ? "text-secondary hover:text-primary hover:bg-secondary/5" 
-                    : "text-secondary hover:text-primary hover:bg-white/50"
+                    ? "hover:text-primary hover:bg-secondary/5" 
+                    : "hover:text-primary hover:bg-white/50"
                 )}
               >
                 {link.name}
@@ -106,7 +108,7 @@ export function Navigation() {
                 offset={-80}
                 duration={500}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-4 text-base font-medium text-secondary hover:text-primary hover:bg-gray-50 border-b border-gray-100 last:border-0"
+                className="block px-3 py-4 text-base font-medium text-[#f5b400] hover:text-primary hover:bg-gray-50 border-b border-gray-100 last:border-0"
               >
                 {link.name}
               </Link>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mail-Guard</title>
+
+  <!-- Modern font and icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="mg-header">
+    <div class="brand">Mail‑Guard</div>
+    <div class="header-actions">
+      <input class="search" type="search" placeholder="Search mail, contacts, tags..." />
+      <button class="btn ghost">New</button>
+      <div class="avatar" title="Account">MG</div>
+    </div>
+  </header>
+
+  <div class="mg-layout">
+    <nav class="mg-sidebar">
+      <ul>
+        <li class="active">Inbox <span class="badge">8</span></li>
+        <li>Starred</li>
+        <li>Sent</li>
+        <li>Drafts</li>
+        <li>Spam</li>
+        <li>Trash</li>
+      </ul>
+      <div class="sidebar-footer">© Mail‑Guard</div>
+    </nav>
+
+    <main class="mg-main">
+      <section class="overview">
+        <div class="card">
+          <h3>Inbox</h3>
+          <p class="muted">8 new messages</p>
+        </div>
+        <div class="card">
+          <h3>Security</h3>
+          <p class="muted">2 threats blocked</p>
+        </div>
+        <div class="card">
+          <h3>Contacts</h3>
+          <p class="muted">34 contacts</p>
+        </div>
+      </section>
+
+      <section class="mail-list card">
+        <div class="list-controls">
+          <div class="left">
+            <input type="checkbox" />
+            <button class="btn small">Refresh</button>
+          </div>
+          <div class="right">
+            <select class="select">
+              <option>All</option>
+              <option>Unread</option>
+              <option>Flagged</option>
+            </select>
+          </div>
+        </div>
+
+        <ul class="emails">
+          <!-- Example items: replace with dynamic content -->
+          <li class="email unread">
+            <div class="from">Security Team</div>
+            <div class="subject">Suspicious sign-in detected</div>
+            <div class="time">09:12</div>
+          </li>
+          <li class="email">
+            <div class="from">Alice</div>
+            <div class="subject">Project updates</div>
+            <div class="time">Yesterday</div>
+          </li>
+          <!-- ...existing code... -->
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer class="mg-footer muted">Built with care • Mail‑Guard</footer>
+
+  <script>
+    // lightweight interactions: toggle active row for demo
+    document.querySelectorAll('.emails .email').forEach(el=>{
+      el.addEventListener('click', ()=> {
+        document.querySelectorAll('.emails .email').forEach(e=>e.classList.remove('selected'));
+        el.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
