@@ -180,7 +180,7 @@ export default function Home() {
       email: "202106345@stu.uob.edu.bh",
       github: "https://github.com/MahmoodFadhel352",
       linkedin: "https://www.linkedin.com/in/mahmoodkadhem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      photo: "/mahmood.jpeg"
+      photo: "public/mahmood.jpeg"
     },
     {
       name: "Aref Abbas Alqattan",
@@ -189,7 +189,7 @@ export default function Home() {
       email: "202105848@stu.uob.edu.bh",
       github: "https://github.com/Aruq69",
       linkedin: "https://www.linkedin.com/in/aref-abbas-alqattan-167209368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      photo: "/aref.jpeg"
+      photo: "public/aref.jpeg"
     },
     {
       name: "Yahya Abdulnabi Fardan",
@@ -198,7 +198,7 @@ export default function Home() {
       email: "202106365@stu.uob.edu.bh",
       github: "https://github.com/yahyafardan",
       linkedin: "https://www.linkedin.com/in/yahya-fardan-816a42268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      photo: "/yahya.jpeg"
+      photo: "public/yahya.jpeg"
     }
   ];
 
