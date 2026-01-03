@@ -621,27 +621,25 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div {...fadeInUp} className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 shadow-sm">
-            <h3 className="text-2xl font-bold mb-6 text-black">Supervisor</h3>
-            <div className="max-w-md mx-auto">
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md transition-all duration-300">
-                <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary to-yellow-600 rounded-full flex items-center justify-center mb-6 text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform text-black overflow-hidden">
-                  {supervisor.photo ? (
-                    <img
-                      src={supervisor.photo}
-                      alt={`${supervisor.name} portrait`}
-                      className="w-full h-full object-cover rounded-full border-2 border-white/70"
-                    />
-                  ) : (
-                    supervisor.name.split(' ').map(n => n[0]).join('')
-                  )}
-                </div>
-                <h3 className="text-xl font-bold mb-1 text-black">{supervisor.name}</h3>
-                <p className="text-primary text-sm font-medium mb-2">{supervisor.rank}</p>
-                <p className="text-gray-700 text-xs mb-4">{supervisor.email}</p>
+          <div className="max-w-md mx-auto">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md transition-all duration-300">
+              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary to-yellow-600 rounded-full flex items-center justify-center mb-6 text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform text-black overflow-hidden">
+                {supervisor.photo ? (
+                  <img
+                    src={supervisor.photo}
+                    alt={`${supervisor.name} portrait`}
+                    className="w-full h-full object-cover rounded-full border-2 border-white/70"
+                  />
+                ) : (
+                  supervisor.name.split(' ').map(n => n[0]).join('')
+                )}
               </div>
+              <h3 className="text-xl font-bold mb-1 text-black">{supervisor.name}</h3>
+              <p className="text-primary text-sm font-medium mb-2">{supervisor.rank}</p>
+              <p className="text-gray-700 text-xs mb-4">{supervisor.email}</p>
             </div>
-          </motion.div>
+          </div>
+        
 
           <div className="grid md:grid-cols-3 gap-6">
             {students.map((student, i) => (
