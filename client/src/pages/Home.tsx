@@ -34,6 +34,7 @@ import demoAr from "/demo_arabic.mp4";
 import mahmoodImg from "/mahmood.jpeg";
 import arefImg from "/aref.jpeg";
 import yahyaImg from "/yahya.jpeg";
+import supervisorImg from "/ebrahim.jpeg";
 
 export default function Home() {
   const [showHeroCard, setShowHeroCard] = useState(true);
@@ -208,7 +209,8 @@ export default function Home() {
   const supervisor = {
     name: "Dr. Ebrahim Abdulrahman Hasan Abdulrahman",
     rank: "Supervisor",
-    email: "ebrahman@uob.edu.bh"
+    email: "eabdulrahman@uob.edu.bh",
+    photo: supervisorImg
   };
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
@@ -621,6 +623,15 @@ export default function Home() {
 
           <motion.div {...fadeInUp} className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 shadow-sm">
             <h3 className="text-2xl font-bold mb-4 text-black">Supervisor</h3>
+            {supervisor.photo && (
+              <div className="flex justify-center mb-4">
+                <img
+                  src={supervisor.photo}
+                  alt={`${supervisor.name} portrait`}
+                  className="w-24 h-24 rounded-full object-cover border-2 border-gray-100"
+                />
+              </div>
+            )}
             <div className="overflow-x-auto">
               <table className="min-w-full text-left text-sm">
                 <thead className="text-gray-700">
