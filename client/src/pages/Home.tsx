@@ -31,6 +31,9 @@ import uobLogo from "/images/uob_logo.png";
 import architectureImg from "/images/architecture.png";
 import demoEng from "/demo_eng.mp4";
 import demoAr from "/demo_arabic.mp4";
+import mahmoodImg from "/mahmood.jpeg";
+import arefImg from "/aref.jpeg";
+import yahyaImg from "/yahya.jpeg";
 
 export default function Home() {
   const [showHeroCard, setShowHeroCard] = useState(true);
@@ -180,7 +183,7 @@ export default function Home() {
       email: "202106345@stu.uob.edu.bh",
       github: "https://github.com/MahmoodFadhel352",
       linkedin: "https://www.linkedin.com/in/mahmoodkadhem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      photo: "public/mahmood.jpeg"
+      photo: mahmoodImg
     },
     {
       name: "Aref Abbas Alqattan",
@@ -189,7 +192,7 @@ export default function Home() {
       email: "202105848@stu.uob.edu.bh",
       github: "https://github.com/Aruq69",
       linkedin: "https://www.linkedin.com/in/aref-abbas-alqattan-167209368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      photo: "public/aref.jpeg"
+      photo: arefImg
     },
     {
       name: "Yahya Abdulnabi Fardan",
@@ -198,7 +201,7 @@ export default function Home() {
       email: "202106365@stu.uob.edu.bh",
       github: "https://github.com/yahyafardan",
       linkedin: "https://www.linkedin.com/in/yahya-fardan-816a42268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      photo: "public/yahya.jpeg"
+      photo: yahyaImg
     }
   ];
 
@@ -780,20 +783,6 @@ export default function Home() {
                 className="h-20 mx-auto md:mx-0 mb-4 opacity-80 grayscale hover:grayscale-0 transition-all" 
               />
               <p className="text-gray-700 text-sm">University of Bahrain</p>
-            </div>
-            <div className="text-center">
-              <h4 className="font-bold text-black mb-4">Quick Links</h4>
-              <div className="space-y-2 text-sm text-black">
-                <p><a href="hero" className="hover:text-primary transition-colors">Home</a></p>
-                <p><a href="abstract" className="hover:text-primary transition-colors">Abstract</a></p>
-                <p><a href="objectives" className="hover:text-primary transition-colors">Objectives</a></p>
-                <p><a href="methodology" className="hover:text-primary transition-colors">Methodology</a></p>
-                <p><a href="technologies" className="hover:text-primary transition-colors">Technologies</a></p>
-                <p><a href="results" className="hover:text-primary transition-colors">Results</a></p>
-                <p><a href="demo" className="hover:text-primary transition-colors">Demo</a></p>
-                <p><a href="conclusion" className="hover:text-primary transition-colors">Conclusion</a></p>
-                <p><a href="about" className="hover:text-primary transition-colors">About & Team</a></p>
-              </div>
             </div>
             <div className="text-center md:text-right">
               <h4 className="font-bold text-black mb-4">Connect</h4>
