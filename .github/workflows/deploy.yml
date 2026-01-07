@@ -33,7 +33,8 @@ jobs:
       - name: Build site
         env:
           VITE_BASE: ./
-        run: npm run build -- --base=./
+        run: |
+          npm run build -- --base=./
 
       - name: Create 404 fallback for SPA
         run: cp dist/public/index.html dist/public/404.html
